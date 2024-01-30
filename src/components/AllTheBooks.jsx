@@ -14,12 +14,12 @@ const AllTheBooks = () => (
     return (
      <Col xs={6} md={4} lg={2} key={book.asin}>
       <Card className="h-100 bg-black text-white">
-       <Card.Img className="img-fluid" variant="top" src={book.img} />
-       <Card.Body>
-        <Card.Title>{book.title}</Card.Title>
+       <Card.Img className="flex-grow-1" variant="top" src={book.img} />
+       <Card.Body className="d-flex flex-column justify-content-between">
+        <Card.Title className="border-bottom">{book.title}</Card.Title>
         <Card.Text>{book.category}</Card.Text>
         <Card.Text>{book.price}€</Card.Text>
-        <Button variant="warning">Go somewhere</Button>
+        <Button variant="warning">Aggiungi al Carrello</Button>
        </Card.Body>
       </Card>
      </Col>
