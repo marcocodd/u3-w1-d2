@@ -8,7 +8,7 @@ import Button from "react-bootstrap/Button";
 
 const AllTheBooks = () => (
  <Container fluid className="bg-dark">
-  <h2 className="text-warning">Libri disponibili</h2>
+  <h2 className="text-warning mb-4">Libri disponibili</h2>
   <Row className="g-3">
    {books.map((book) => {
     return (
