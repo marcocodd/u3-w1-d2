@@ -12,7 +12,7 @@ const AllTheBooks = () => (
   <Row className="g-3">
    {books.map((book) => {
     return (
-     <Col xs={6} md={4} lg={2}>
+     <Col xs={6} md={4} lg={2} key={book.asin}>
       <Card className="h-100">
        <Card.Img variant="top" src={book.img} />
        <Card.Body>
