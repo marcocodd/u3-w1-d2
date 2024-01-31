@@ -7,13 +7,19 @@ class SingleBook extends Component {
   selected: false,
  };
 
- ToggleSelectedCard = function () {};
+ SelectCard = () => {
+  this.setState((prevState) => ({
+   selected: !prevState.selected,
+  }));
+ };
 
  render() {
   return (
    <Card
-    onClick={this.ToggleSelectedCard}
-    className="h-100 bg-black text-white "
+    onClick={this.SelectCard}
+    className={`h-100 bg-black text-white ${
+     this.state.selected ? "selected" : ""
+    }`}
    >
     <Card.Img className="flex-grow-1" variant="top" src={this.props.book.img} />
     <Card.Body className="d-flex flex-column justify-content-between">

@@ -4,7 +4,7 @@ import CustomNavBar from "./components/CustomNavBar";
 import CustomFooter from "./components/CustomFooter";
 //import AllTheBooks from "./components/AllTheBooks";
 import BookList from "./components/BookList";
-import arrayBooks from './components/data/horror.json'
+import arrayBooksHorror from "./components/data/horror.json";
 
 function App() {
  return (
@@ -13,7 +13,7 @@ function App() {
     <CustomNavBar />
    </header>
    <main>
-    <BookList books={arrayBooks} />
+    <BookList books={arrayBooksHorror} />
    </main>
    <CustomFooter />
   </div>

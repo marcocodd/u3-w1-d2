@@ -38,5 +38,5 @@
 }
 
 .selected {
-  border: 2px solid red
+  border: 5px solid greenyellow !important
 }
