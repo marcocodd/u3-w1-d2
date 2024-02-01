@@ -5,6 +5,7 @@ import CustomFooter from "./components/CustomFooter";
 //import AllTheBooks from "./components/AllTheBooks";
 import BookList from "./components/BookList";
 import arrayBooksHorror from "./components/data/horror.json";
+import CommentArea from "./components/CommentArea";
 
 function App() {
  return (
@@ -15,6 +16,7 @@ function App() {
    <main>
     <BookList books={arrayBooksHorror} />
    </main>
+
    <CustomFooter />
   </div>
  );
