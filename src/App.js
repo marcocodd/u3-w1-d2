@@ -7,6 +7,7 @@ import BookList from "./components/BookList";
 import arrayBooksHorror from "./components/data/horror.json";
 import CommentArea from "./components/CommentArea";
 
+
 function App() {
  return (
   <div className="App">
@@ -15,8 +16,8 @@ function App() {
    </header>
    <main>
     <BookList books={arrayBooksHorror} />
+    <CommentArea />
    </main>
-
    <CustomFooter />
   </div>
  );
