@@ -39,7 +39,7 @@ class CommentArea extends Component {
  }
 
  render() {
-  console.log(this.state.comments);
+  console.log("array", this.state.comments);
   return;
  }
 }

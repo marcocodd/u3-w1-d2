@@ -28,8 +28,8 @@ class SingleBook extends Component {
      <Card.Text>{this.props.book.category}</Card.Text>
      <Card.Text>{this.props.book.price}€</Card.Text>
      <Button variant="warning">Aggiungi al Carrello</Button>
+     {this.state.selected && <CommentArea asin={this.props.book.asin} />}
     </Card.Body>
-    {this.state.selected && <CommentArea asin={this.props.book.asin} />}
    </Card>
   );
  }
