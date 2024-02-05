@@ -28,6 +28,7 @@ class CommentArea extends Component {
     this.setState({
      comments: arrayOfComments,
     });
+    console.log("array", this.state.comments);
    })
    .catch((err) => {
     console.log(err);
@@ -39,9 +40,17 @@ class CommentArea extends Component {
  }
 
  render() {
-  console.log("array", this.state.comments);
-  return;
- }
+  return (
+    <div>
+      <h6>Comments:</h6>
+      <ul className="text-white">
+        {this.state.comments.map((comment, index) => (
+          <li key={comment._id}>{[index + 1]} - {comment.comment} Voto: {comment.rate}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 }
 
 export default CommentArea;

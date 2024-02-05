@@ -40,3 +40,7 @@
 .selected {
   border: 5px solid greenyellow !important
 }
+
+ul{
+  list-style: none;
+}
