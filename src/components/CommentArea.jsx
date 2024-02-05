@@ -39,11 +39,17 @@ class CommentArea extends Component {
   this.fetchComments();
  }
 
+ componentDidUpdate(prevProps) {
+  if (this.props.asin !== prevProps.asin) {
+   this.fetchComments();
+  }
+ }
+
  render() {
   return (
    <div>
     <h3 className="text-warning">Comments:</h3>
-    <ul>
+    <ul className="text-white">
      {this.state.comments.map((comment, index) => (
       <li key={comment._id}>
        {[index + 1]} - {comment.comment} Voto: {comment.rate}
@@ -52,7 +58,7 @@ class CommentArea extends Component {
     </ul>
    </div>
   );
-}
+ }
 }
 
 export default CommentArea;

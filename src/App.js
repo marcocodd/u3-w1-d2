@@ -11,11 +11,11 @@ import { Component } from "react";
 
 class App extends Component {
  state = {
-  selectedBook: null,
+  selectedBookAsin: null,
  };
 
- OnBookClick = (asin) => {
-  this.setState({ selectedBook: asin });
+ OnBookSelect = (asin) => {
+  this.setState({ selectedBookAsin: asin });
  };
 
  render() {
@@ -28,10 +28,10 @@ class App extends Component {
      <Container fluid className="p-0 bg-dark">
       <Row>
        <Col className="col-6 border-end">
-        <BookList books={arrayBooksHorror} />
+        <BookList books={arrayBooksHorror} OnBookSelect={this.OnBookSelect} />
        </Col>
        <Col className="col-6">
-        <CommentArea asin={this.props.asin} />
+        <CommentArea asin={this.state.selectedBookAsin} />
        </Col>
       </Row>
      </Container>

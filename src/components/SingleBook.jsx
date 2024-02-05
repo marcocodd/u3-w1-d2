@@ -12,6 +12,7 @@ class SingleBook extends Component {
   this.setState((prevState) => ({
    selected: !prevState.selected,
   }));
+  this.props.OnBookSelect(this.props.book.asin);
  };
 
  render() {
