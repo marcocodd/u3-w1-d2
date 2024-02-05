@@ -41,14 +41,16 @@ class CommentArea extends Component {
 
  render() {
   return (
-    <div>
-      <h6>Comments:</h6>
-      <ul className="text-white">
-        {this.state.comments.map((comment, index) => (
-          <li key={comment._id}>{[index + 1]} - {comment.comment} Voto: {comment.rate}</li>
-        ))}
-      </ul>
-    </div>
+   <div>
+    <h3 className="text-warning">Comments:</h3>
+    <ul>
+     {this.state.comments.map((comment, index) => (
+      <li key={comment._id}>
+       {[index + 1]} - {comment.comment} Voto: {comment.rate}
+      </li>
+     ))}
+    </ul>
+   </div>
   );
 }
 }
