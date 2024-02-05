@@ -14,7 +14,7 @@ class App extends Component {
   selectedBookAsin: null,
  };
 
- OnBookSelect = (asin) => {
+ OnBookSelectGetAsin = (asin) => {
   this.setState({ selectedBookAsin: asin });
  };
 
@@ -28,7 +28,10 @@ class App extends Component {
      <Container fluid className="p-0 bg-dark">
       <Row>
        <Col className="col-6 border-end">
-        <BookList books={arrayBooksHorror} OnBookSelect={this.OnBookSelect} />
+        <BookList
+         books={arrayBooksHorror}
+         OnBookSelectGetAsin={this.OnBookSelectGetAsin}
+        />
        </Col>
        <Col className="col-6">
         <CommentArea asin={this.state.selectedBookAsin} />
